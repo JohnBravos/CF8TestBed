@@ -12,12 +12,11 @@ public class SharesApp {
         int[] shares = {1, -1, -1, -1, 1, 1, 1, 1, -1, -1};
         int times = getSharesGoDown(shares);
 
-        System.out.println("Times shares below base: " + times);
+        System.out.println("Times shares go below 0: " + times);
 
     }
 
     /**
-     *
      * @param shares the array with shares shifts up and down
      * @return how many times goes below base
      */
