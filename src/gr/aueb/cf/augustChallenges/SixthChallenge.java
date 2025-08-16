@@ -6,6 +6,8 @@ package gr.aueb.cf.augustChallenges;
 με μέθοδο.
  */
 
+import java.util.Arrays;
+
 public class SixthChallenge {
 
     public static void main(String[] args) {
@@ -15,27 +17,32 @@ public class SixthChallenge {
     }
 
     public static void findOccurrenceFrequency(int[] arr) {
-        int positives = 0;
-        int negatives = 0;
-        int zeroes = 0;
+//        int positives = 0;
+//        int negatives = 0;
+//        int zeroes = 0;
         int total = arr.length;
-
-        for (int j : arr) {
-            if (j > 0) {
-                positives += 1;
-            } else if (j < 0) {
-                negatives += 1;
-            } else {
-                zeroes += 1;
-            }
-        }
-
-        // Υπολογισμός συχνοτήτων με 6 δεκαδικά ψηφία
-        double positivesFreq = (double) positives / total;
-        double negativesFreq = (double) negatives / total;
-        double zeroesFreq = (double) zeroes / total;
+//
+//        for (int j : arr) {
+//            if (j > 0) {
+//                positives += 1;
+//            } else if (j < 0) {
+//                negatives += 1;
+//            } else {
+//                zeroes += 1;
+//            }
+//        }
+//
+//        // Υπολογισμός συχνοτήτων με 6 δεκαδικά ψηφία
+//        double positivesFreq = (double) positives / total;
+//        double negativesFreq = (double) negatives / total;
+//        double zeroesFreq = (double) zeroes / total;
 
         // Εκτύπωση με 6 δεκαδικά ψηφία
-        System.out.printf("Συχνότητα θετικών: %6f, Συχνότητα αρνητικών: %6f, Συχνότητα μηδενικών: %6f", positivesFreq, negativesFreq, zeroesFreq);
+//        System.out.printf("Συχνότητα θετικών: %6f, Συχνότητα αρνητικών: %6f, Συχνότητα μηδενικών: %6f", positivesFreq, negativesFreq, zeroesFreq);
+
+//                Sorter Solution με streams
+        System.out.printf("Positives: %.6f\n", Arrays.stream(arr).filter(x -> x > 0).count() / (double) total);
+        System.out.printf("Negatives: %.6f\n", Arrays.stream(arr).filter(x -> x < 0).count() / (double) total);
+        System.out.printf("Zeroes:    %.6f", Arrays.stream(arr).filter(x -> x == 0).count() / (double) total);
     }
 }
