@@ -2,7 +2,7 @@ package gr.aueb.cf.augustChallenges;
 
 /*
     Ελέγχει άν ένα String είναι παλινδρομικό, δηλαδή
-    διαβάζεται το ίδιο από την αρχή και το τέλος.
+    διαβάζεται το ίδιο από την αρχή και το τέλος
  */
 
 public class SeventeenthChallenge {
