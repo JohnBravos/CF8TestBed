@@ -7,7 +7,7 @@ package gr.aueb.cf.augustChallenges;
 
 import java.util.Arrays;
 
-public class sixteenthChallenge {
+public class SixteenthChallenge {
 
     public static void main(String[] args) {
         String s = "abracadabra";
